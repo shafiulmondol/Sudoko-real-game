@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Sudoku Game</title>
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
   <h1>Sudoku Game</h1>
@@ -13,84 +13,6 @@
     <button onclick="checkSolution()">Check Solution</button>
     <button onclick="resetBoard()">Reset</button>
   </div>
-
-  <script>
-    const puzzle = [
-      [5, 3, '', '', 7, '', '', '', ''],
-      [6, '', '', 1, 9, 5, '', '', ''],
-      ['', 9, 8, '', '', '', '', 6, ''],
-      [8, '', '', '', 6, '', '', '', 3],
-      [4, '', '', 8, '', 3, '', '', 1],
-      [7, '', '', '', 2, '', '', '', 6],
-      ['', 6, '', '', '', '', 2, 8, ''],
-      ['', '', '', 4, 1, 9, '', '', 5],
-      ['', '', '', '', 8, '', '', 7, 9]
-    ];
-
-    const board = document.getElementById("board");
-
-    function createBoard() {
-      board.innerHTML = '';
-      for (let row = 0; row < 9; row++) {
-        for (let col = 0; col < 9; col++) {
-          const cell = document.createElement("input");
-          cell.type = "text";
-          cell.maxLength = 1;
-          cell.classList.add("cell");
-          if (puzzle[row][col] !== '') {
-            cell.value = puzzle[row][col];
-            cell.classList.add("readonly");
-            cell.readOnly = true;
-          }
-          cell.dataset.row = row;
-          cell.dataset.col = col;
-          board.appendChild(cell);
-        }
-      }
-    }
-
-    function checkSolution() {
-      const cells = document.querySelectorAll(".cell");
-      const grid = Array.from({ length: 9 }, () => Array(9).fill(''));
-      cells.forEach(cell => {
-        const row = parseInt(cell.dataset.row);
-        const col = parseInt(cell.dataset.col);
-        grid[row][col] = cell.value;
-      });
-
-      const isValid = validateSudoku(grid);
-      alert(isValid ? "🎉 Correct solution!" : "❌ There are mistakes in your solution.");
-    }
-
-    function resetBoard() {
-      createBoard();
-    }
-
-    function validateSudoku(grid) {
-      const isValidSet = set => new Set(set.filter(v => v)).size === set.filter(v => v).length;
-
-      for (let i = 0; i < 9; i++) {
-        const row = grid[i];
-        const col = grid.map(row => row[i]);
-        if (!isValidSet(row) || !isValidSet(col)) return false;
-      }
-
-      for (let r = 0; r < 9; r += 3) {
-        for (let c = 0; c < 9; c += 3) {
-          const box = [];
-          for (let i = 0; i < 3; i++) {
-            for (let j = 0; j < 3; j++) {
-              box.push(grid[r + i][c + j]);
-            }
-          }
-          if (!isValidSet(box)) return false;
-        }
-      }
-
-      return true;
-    }
-
-    createBoard();
-  </script>
+  <script src="sudoku.js"></script>
 </body>
 </html>
