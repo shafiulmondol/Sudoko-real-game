@@ -19,9 +19,9 @@ Welcome to the **Sudoku Real Game** – a web-based, interactive Sudoku puzzle b
 
 ## 📸 Screenshots
 
-| Game Board | Validation |
-|------------|------------|
-| ![Game Screenshot](https://github.com/shafiulmondol/Sudoko-real-game/raw/main/assets/screenshot1.png)
+| Game Board |
+|------------|
+| ![Game Screenshot]([https://github.com/shafiulmondol/Sudoko-real-game/raw/main/assets/screenshot1.png](https://github.com/shafiulmondol/Sudoko-real-game/blob/main/sudoku%20game.png))
 ---
 
 ## 🚀 How to Play
