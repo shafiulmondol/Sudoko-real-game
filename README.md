@@ -2,8 +2,6 @@
 
 Welcome to the **Sudoku Real Game** – a web-based, interactive Sudoku puzzle built with HTML, CSS, and JavaScript. This project is designed to provide a fun and challenging number puzzle experience directly in your browser.
 
-![Sudoku Banner](https://github.com/shafiulmondol/Sudoko-real-game/raw/main/assets/sudoku-banner.png)
-
 ---
 
 ## 🌟 Features
@@ -21,7 +19,7 @@ Welcome to the **Sudoku Real Game** – a web-based, interactive Sudoku puzzle b
 
 | Game Board |
 |------------|
-| ![Game Screenshot]([https://github.com/shafiulmondol/Sudoko-real-game/raw/main/assets/screenshot1.png](https://github.com/shafiulmondol/Sudoko-real-game/blob/main/sudoku%20game.png))
+| ![Game Screenshot](https://github.com/shafiulmondol/Sudoko-real-game/blob/main/sudoku%20game.png?raw=true)
 ---
 
 ## 🚀 How to Play
